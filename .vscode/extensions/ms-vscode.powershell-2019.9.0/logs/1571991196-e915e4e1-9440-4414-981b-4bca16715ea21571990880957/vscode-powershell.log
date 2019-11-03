@@ -1,0 +1,8 @@
+10/25/2019 9:13:16 AM [NORMAL] - Path specified by 'powerShellExePath' setting - '' - not found, reverting to default PowerShell path.
+10/25/2019 9:13:16 AM [NORMAL] - Language server starting --
+10/25/2019 9:13:16 AM [NORMAL] -     exe: /usr/local/bin/pwsh
+10/25/2019 9:13:16 AM [NORMAL] -     args: /Users/phil/.vscode/extensions/ms-vscode.powershell-2019.9.0/modules/PowerShellEditorServices/Start-EditorServices.ps1 -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2019.9.0' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath '/Users/phil/.vscode/extensions/ms-vscode.powershell-2019.9.0/modules' -EnableConsoleRepl -LogLevel 'Normal' -LogPath '/Users/phil/.vscode/extensions/ms-vscode.powershell-2019.9.0/logs/1571991196-e915e4e1-9440-4414-981b-4bca16715ea21571990880957/EditorServices.log' -SessionDetailsPath '/Users/phil/.vscode/extensions/ms-vscode.powershell-2019.9.0/sessions/PSES-VSCode-62410-374723' -FeatureFlags @()
+10/25/2019 9:13:18 AM [NORMAL] - powershell.exe terminated or terminal UI was closed
+10/25/2019 9:15:16 AM [NORMAL] - Language server startup failed.
+10/25/2019 9:15:16 AM [ERROR] - The language service could not be started: 
+10/25/2019 9:15:16 AM [ERROR] - Timed out waiting for session file to appear.
