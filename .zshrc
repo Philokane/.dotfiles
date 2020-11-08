@@ -153,7 +153,6 @@ alias curlo='curl -w "\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_
 alias fc='fastlycli'
 alias ssheav='ssh heavenly-slwdc9047'
 alias ssheav4='ssh heavenly-slwdc9044'
-export FASTLY_TOKEN="KL4FYng1exUi5PBip2w-djPB2M_c6O7n"
 alias fctl='fastlyctl'
 
 
