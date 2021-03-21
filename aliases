@@ -1,0 +1,87 @@
+# Note: for the ll alias output...
+#
+# Slash ('/') immediately after each pathname is a directory
+# Asterisk ('*') after each pathname is an executable
+# At sign ('@') after each pathname is a symbolic link
+# Equals sign ('=') after each pathname is a socket
+# Percent sign ('%') after each pathname is a whiteout
+# Vertical bar ('|') after each pathname is a FIFO
+
+alias ls="ls -GpF"
+alias r="source ~/.bash_profile" # this also sources .bashrc and also causes `pass` autocomplete to be reloaded
+alias sizeit="du -ahc" # can also add on a path at the end `sizeit ~/some/path`
+alias sys='sw_vers && echo && system_profiler SPSoftwareDataType && curl -s https://en.wikipedia.org/wiki/MacOS_version_history | grep -Eo "Version $(version=$(sw_vers -productVersion) && echo ${version%.*}): \"[^\"]+\"" | uniq'
+alias uid="uuidgen"
+alias updates="softwareupdate --list" # --install --all (or) --install <product name>
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+alias sp='spotify'
+alias spp='spotify play'
+alias sps='spotify stop'
+alias spn='spotify next'
+alias spi='spotify info'
+
+# user configuration
+# custom aliases
+alias python=python3
+alias c="code ."; # open this dir in VSCode
+alias ll="ls -laGpFHh"
+#alias ll="ls -la";
+alias ..="cd ../";
+alias ..l="cd ../ && ll";
+alias pg="echo 'Pinging Google' && ping www.google.com";
+alias de="cd ~/Desktop";
+alias dd="cd ~/code";
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias deleteDSFiles="find . -name '.DS_Store' -type f -delete"
+alias npm-update="npx npm-check -u";
+alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder"
+
+## other aliases
+alias zshrc='code ~/.zshrc'
+alias topten="history | commands | sort -rn | head"
+alias myip="curl http://ipecho.net/plain; echo"
+alias dirs='dirs -v | head -10'
+alias usage='du -h -d1'
+alias update="source ~/.zshrc"
+alias sshdir="cd ~/.ssh"
+alias runp="lsof -i "
+alias md="mkdir "
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias reload='source $HOME/.zshrc'
+
+# Edit web dev
+alias edithosts='sudo vim /etc/hosts'
+alias edithttpd='edit /etc/apache2/httpd.conf'
+alias editphp='edit /etc/php.ini'
+alias editvhosts='edit /etc/apache2/extra/httpd-vhosts.conf'
+alias media="ssh -t icedcoffee@media.icedcoffee.ie 'cd ~/torrents/data; bash'"
+alias memcpu='ps -amcwwwxo "command %mem %cpu" | head -20'
+alias showhidden='defaults write com.apple.finder AppleShowAllFiles -bool TRUE | killall Finder'
+alias hidehidden='defaults write com.apple.finder AppleShowAllFiles -bool FALSE | killall Finder'
+alias ydl='youtube-dl --extract-audio --audio-format wav'
+alias rsync='rsync -R --append --partial --ignore-existing --size-only -Pavz'
+alias web='ssh phil@icedcoffee.ie'
+alias fail2banchek='sudo iptables -L | grep'
+alias fail2banremove='sudo fail2ban-client set sshd unbanip'
+alias speedtest='speedtest-cli'
+alias less='less -i'
+
+# AWS commands
+alias ssh-aws='ssh -i ~/Dropbox/AWS\ Key/fastly-ec2.pem ec2-user@18.135.221.169'
+alias ssh-aws2='ssh -i ~/Dropbox/AWS\ Key/webserver02.pem ec2-user@3.9.128.247'
+alias ssh-aws3="ssh -i ~/Dropbox/AWS\ Key/fastly-ec2.pem ubuntu@ec2-52-56-224-244.eu-west-2.compute.amazonaws.com"
+#alias ssh-bitnami="ssh -i ~/Dropbox/AWS\ Key/LightsailDefaultKey-eu-west-2.pem bitnami@3.8.8.235"
+#alias ssh-aws='ssh -i ~/Dropbox/AWS\ Key/webserver02.pem  ec2-user@ec2-3-10-226-248.eu-west-2.compute.amazonaws.com'
+
+# FASTLY commands
+alias curlo='curl -w "\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n" -svo /dev/null -H fastly-debug:1'
+alias fc='fastlycli'
+alias ssheav='ssh heavenly-slwdc9047'
+alias ssheav4='ssh heavenly-slwdc9044'
+alias fctl='fastlyctl'
+alias fsmcurl='curl -svX FASTLYSERVICEMATCH /dev/null'

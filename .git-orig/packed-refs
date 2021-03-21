@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled sorted 
+ddff56010bd180b4ff0f8929d1ce54187abf5a63 refs/remotes/origin/git-post-push-compare-url
+14837bafc724a24df6a170f4e2b8c5c70197fe3a refs/remotes/origin/master
+c158680dcb6315d04af184cec12ee6f97e7df04e refs/remotes/origin/patch-1
