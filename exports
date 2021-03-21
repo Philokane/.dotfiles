@@ -1,0 +1,13 @@
+export ZSH="/Users/philcarrollokane/.oh-my-zsh"
+export PATH="${HOME}/.pyenv/bin:${PATH}"
+export PATH=$PATH:"/Users/philcarrollokane/Code/Fastly"
+
+
+
+
+
+export FASTLY_TOKEN="98Sn7Me_nBqJwzLG5dH6ndvJy-YOp7n0"
+
+# phil.beer a/c Global token:
+export FASTLY_TOKEN1="A-iydqKx35tHAzdHvgvEJafVbpcfe6-P"
+
