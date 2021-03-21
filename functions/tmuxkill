@@ -1,0 +1,5 @@
+# makes deleting a tmux session easier
+function tmuxkill() {
+  tmux kill-session -t $1
+}
+

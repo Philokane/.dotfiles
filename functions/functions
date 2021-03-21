@@ -1,0 +1,11 @@
+# Functions
+function nodes {
+        awk -F "," '{print $1}' ~/.ssh/known_hosts.fastly | grep "cache-$1"
+}
+
+function randomnode () {
+        nodelist=`cat ~/.ssh/known_hosts.fastly | grep cache-"$1" | cut -d ',' -f 1 | sort | uniq`
+        linecount=`echo "$nodelist" | wc -l`
+        randomline=`jot -r 1 1 $linecount`
+        echo "$nodelist" | awk "{if (NR==$randomline) print}" | tee >(pbcopy)
+}

@@ -1,0 +1,5 @@
+# Makes creating a new tmux session (with a specific name) easier
+function tmuxnew() {
+  tmux new -s $1
+}
+
